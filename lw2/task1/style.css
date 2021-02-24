@@ -87,6 +87,12 @@
   font-weight: bold;
 }
 
+.black {
+  background: #000;
+}
+.text-white {
+  color: #FFFFFF;
+}
 
 @font-face {
   font-family: JosefinSans-Regular; /* Имя шрифта */
