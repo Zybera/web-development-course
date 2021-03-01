@@ -1,25 +1,29 @@
+@font-face {
+  font-family: JosefinSans-Regular;
+  src: url(fonts/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: JosefinSans-Bold;
+  src: url(fonts/JosefinSans-Bold.ttf);
+}
+
 .wrapper {
   width: 1440px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
 }
 .header {
-  margin: 80px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 80px auto;
+  width: 652px;
+  text-align: center;
 }
 .header-title {
-  width: 607px;
-  margin: 12px 0px;
+  margin: 12px 0px 12px 15px;
   color:#121212;
   font-family: JosefinSans-Bold;
   font-size: 86px;
+  line-height: 88px;
   letter-spacing: 0.01em;
-  display: flex;
 }
-.header-title-item2 {
+.header-title-underline {
   padding: 0px 16px;
   margin: 0px 16px;
   background: linear-gradient(180deg, rgba(237, 96, 65, 0) 85.76%, #ED6041 85.82%);
@@ -29,7 +33,6 @@
   font-size: 18px;
   line-height: 28px;
   color: #414141;
-  width: 652px;
   text-align: center;
 }
 .content {
@@ -37,23 +40,23 @@
 }
 .row {
   display: flex;
-  margin: 0px 0px 40px 0px;
+  margin-bottom: 40px;
 }
 .row:last-child {
-  margin: 0px 0px 0px 0px;
+  margin-bottom: 0px;
 }
 .row-item {
   display: flex;
-  margin: 0px 16px 0px 0px;
+  margin-right: 16px;
 }
-.item-img img{
+.item-img img {
   width: 208px;
   height: 208px;
 }
 .item-description {
   display: flex;
   flex-direction: column;
-  padding: 0px 0px 0px 24px;
+  padding-left: 24px;
 }
 .item-title {
   font-family: JosefinSans-Bold;
@@ -66,25 +69,26 @@
   line-height: 24px;
   color: #414141;
   width: 388px;
-  margin: 12px 0px 0px 0px;
+  margin: 12px 0px 16px 0px;
 }
 .item-btn {
-  margin: 16px 0px 0px 0px;
   background: #EC6041;
-  box-shadow:  4px 4px 0px 0px #F1876F, 8px 8px 0px 0px #F5AE9E;
+  box-shadow: 4px 4px 0px 0px #F1876F, 8px 8px 0px 0px #F5AE9E;
   text-decoration: none;
-  color: #FFFFFF;
   width: 144px;
   height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-family: JosefinSans-Regular;
   font-weight: bold;
+  color: #FFFFFF;
+}
+.item-btn-text {
+  position: relative;
+  top: 10px;
+  left: 12px;
 }
 
 .black {
@@ -92,13 +96,4 @@
 }
 .text-white {
   color: #FFFFFF;
-}
-
-@font-face {
-  font-family: JosefinSans-Regular; /* Имя шрифта */
-  src: url(../fonts/JosefinSans-Regular.ttf); /* Путь к файлу со шрифтом */
-}
-@font-face {
-   font-family: JosefinSans-Bold; /* Имя шрифта */
-   src: url(../fonts/JosefinSans-Bold.ttf); /* Путь к файлу со шрифтом */
 }
