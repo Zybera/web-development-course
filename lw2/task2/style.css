@@ -8,8 +8,6 @@
   height: 70px;
   color: rgb(105, 99, 105);
   font-size: 170%;
-}
-.button-large {
   border: 3px solid rgb(105, 99, 105);
 }
 .button.button-large.button-filled {
@@ -21,8 +19,6 @@
   height: 60px;
   color: purple;
   font-size: 135%;
-}
-.button-primary {
   border: 3px solid purple;
 }
 .button.button-primary.button-filled {
@@ -34,8 +30,6 @@
   height: 55px;
   color: green;
   font-size: 125%;
-}
-.button-success {
   border: 3px solid green;
 }
 .button.button-success.button-filled {
@@ -47,8 +41,6 @@
   height: 50px;
   color: blue;
   font-size: 115%;
-}
-.button-medium {
   border: 3px solid blue;
 }
 .button.button-medium.button-filled {
@@ -60,8 +52,6 @@
   height: 45px;
   color: yellow;
   font-size: 100%;
-}
-.button-warning {
   border: 3px solid yellow;
 }
 .button.button-warning.button-filled {
@@ -73,14 +63,12 @@
   height: 40px;
   color: red;
   font-size: 90%;
-}
-.button-red {
   border: 3px solid red;
 }
 .button.button-red.button-filled {
   background: red;
   color: #fff;
 }
-.button-rounded {
+.button.button-rounded {
   border-radius: 100px;
 }
