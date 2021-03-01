@@ -2,6 +2,7 @@
   font-family: JosefinSans-Regular;
   src: url(fonts/JosefinSans-Regular.ttf);
 }
+
 @font-face {
   font-family: JosefinSans-Bold;
   src: url(fonts/JosefinSans-Bold.ttf);
@@ -11,24 +12,28 @@
   width: 1440px;
   margin: 0 auto;
 }
+
 .header {
   margin: 80px auto;
   width: 652px;
   text-align: center;
 }
+
 .header-title {
   margin: 12px 0px 12px 15px;
-  color:#121212;
+  color: #121212;
   font-family: JosefinSans-Bold;
   font-size: 86px;
   line-height: 88px;
   letter-spacing: 0.01em;
 }
+
 .header-title-underline {
   padding: 0px 16px;
   margin: 0px 16px;
   background: linear-gradient(180deg, rgba(237, 96, 65, 0) 85.76%, #ED6041 85.82%);
 }
+
 .header-text {
   font-family: JosefinSans-Regular;
   font-size: 18px;
@@ -36,35 +41,43 @@
   color: #414141;
   text-align: center;
 }
+
 .content {
   padding: 0px 70px;
 }
+
 .row {
   display: flex;
   margin-bottom: 40px;
 }
+
 .row:last-child {
   margin-bottom: 0px;
 }
+
 .row-item {
   display: flex;
   margin-right: 16px;
 }
+
 .item-img img {
   width: 208px;
   height: 208px;
 }
+
 .item-description {
   display: flex;
   flex-direction: column;
   padding-left: 24px;
 }
+
 .item-title {
   font-family: JosefinSans-Bold;
   font-size: 35px;
   line-height: 40px;
-  color:#121212;
+  color: #121212;
 }
+
 .item-text {
   font-family: JosefinSans-Regular;
   line-height: 24px;
@@ -72,6 +85,7 @@
   width: 388px;
   margin: 12px 0px 16px 0px;
 }
+
 .item-btn {
   background: #EC6041;
   box-shadow: 4px 4px 0px 0px #F1876F, 8px 8px 0px 0px #F5AE9E;
@@ -86,6 +100,7 @@
   font-weight: bold;
   color: #FFFFFF;
 }
+
 .item-btn-text {
   position: relative;
   top: 10px;
@@ -95,6 +110,7 @@
 .black {
   background: #000;
 }
+
 .text-white {
   color: #FFFFFF;
 }

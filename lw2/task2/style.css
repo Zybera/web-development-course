@@ -50,12 +50,12 @@
 .button.button-warning{
   width: 115px;
   height: 45px;
-  color: yellow;
+  color: #fac423;
   font-size: 100%;
-  border: 3px solid yellow;
+  border: 3px solid #fac423;
 }
 .button.button-warning.button-filled {
-  background: yellow;
+  background: #fac423;
   color: #fff;
 }
 .button.button-red{
