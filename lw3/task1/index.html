@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shopping Cart</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="title">My Shopping Cart</h1>
+    <div class="content">
+      <div class="columns">
+        <span class="columns_image"></span>
+        <span class="columns_description">Description</span>
+        <span class="columns_size">Size</span>
+        <span class="columns_quantity">Quantity</span>
+        <span class="columns_remove">Remove</span>
+        <span class="columns_price">Price</span>
+      </div>
+      <div class="product">
+        <div class="product_row">
+          <img src="images/pant.png" alt="" class="product_image">
+          <div class="product_description">
+            <span class="product_description_name">Streamline Leggings</span>
+            <span class="product_description_code">Product Code: MLSB</span>
+          </div>
+          <div class="product_size">S</div>
+          <div class="product_quantity">
+            <div class="product_quantity_plus">+</div>
+            <div class="product_quantity_count">1</div>
+            <div class="product_quantity_minus">&minus;</div>
+          </div>
+          <div class="product_remove">&times;</div>
+          <div class="product_price">&pound;55</div>
+        </div>
+        <div class="product_row">
+          <img src="images/short.png" alt="" class="product_image">
+          <div class="product_description">
+            <span class="product_description_name">Streamline Sports Bra</span>
+            <span class="product_description_code">Product Code: MLSB</span>
+          </div>
+          <div class="product_size">S</div>
+          <div class="product_quantity">
+            <div class="product_quantity_plus">+</div>
+            <div class="product_quantity_count">1</div>
+            <div class="product_quantity_minus">&minus;</div>
+          </div>
+          <div class="product_remove">&times;</div>
+          <div class="product_price">&pound;55</div>
+        </div>
+      </div>
+      <div class="price">
+        <div class="price_discount">
+          <span>Discount</span>
+          <span>&pound;0.00</span>
+        </div>
+        <div class="price_delivery">
+          <span>Delivery</span>
+          <span>&pound;0.00</span>
+        </div>
+        <div class="price_subtotal">
+          <span>Subtotal</span>
+          <span>&pound;110.00</span>
+        </div>
+        <div class="price_total">
+          <span>Total</span>
+          <span>&pound;110.00</span>
+        </div>
+      </div>
+      <div class="actions">
+        <span class="actions_comment">If you have a promotion code, please enter it here</span>
+        <div class="actions_block">
+          <div class="acitons_form">
+            <form method="GET">
+              <input type="text" placeholder="Please enter promo code" class="promo">
+              <input type="submit" value="Apply Discount" class="sub">
+            </form>
+          </div>
+          <div class="actions_buttons">
+            <div class="actions_buttons_checkout">
+              <button class="button checkuot">Checkuot</button>
+              <button class="button cart"><img src="images/shopping-cart.svg" alt="" class="cart-img"></button>
+            </div>
+            <button class="button update">Update Quantity</button>
+            <button class="button continue">Continue Shopping</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
