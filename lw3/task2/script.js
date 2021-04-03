@@ -1,7 +1,13 @@
 function isTimeRangesIntersect(timeRange1, timeRange2) {
-  if (timeRange1 !== undefined && timeRange2 !== undefined &&
-    
-      Array.isArray(timeRange1) && Array.isArray(timeRange2) &&
+  if (isValidTimeRange(timeRange1, timeRange2) === true &&
+      timeRange1[0] <= timeRange2[1] && timeRange1[1] >= timeRange2[0]) {
+    return true;
+  }else {
+    return false;
+  }
+}
+function isValidTimeRange(timeRange1, timeRange2) {
+  if (Array.isArray(timeRange1) && Array.isArray(timeRange2) &&
 
       timeRange1.length === 2 &&
       timeRange2.length === 2 &&
@@ -33,12 +39,9 @@ function isTimeRangesIntersect(timeRange1, timeRange2) {
       timeRange2[1][0] + timeRange2[1][1] < 24 &&
       timeRange2[1][2] === ':' &&
       timeRange2[1][3] + timeRange2[1][4] >= 0 &&
-      timeRange2[1][3] + timeRange2[1][4] < 60 &&
-
-
-      timeRange1[0] <= timeRange2[1] && timeRange1[1] >= timeRange2[0]) {
+      timeRange2[1][3] + timeRange2[1][4] < 60) {
     return true;
-  }else {
+  } else {
     return false;
   }
 }
