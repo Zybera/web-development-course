@@ -82,8 +82,7 @@ var MusicPlayer = {
       }else if (this.currentTime >= trackTimeArray[currentTrackIndex]) {
         this.next();
       }
-      console.log(this.display());
-    }, 100);
+    }, 1000);
   },
   stopTimer: function () {
     clearInterval(this.timer);
