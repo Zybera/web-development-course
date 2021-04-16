@@ -1,3 +1,4 @@
+```
 .page
   .header
     .header-block
@@ -56,3 +57,4 @@
         .my-bills_block
           .my-bills_text
           .my-bills_status--success
+```
