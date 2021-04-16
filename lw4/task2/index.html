@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,66 +8,58 @@
   <title>TODO-list</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="page">
+    <header class="header">
+      <div class="header__button prev">&lt;</div>
+      <div class="header__calendar">
+        <h2>MONDAY</h2><span>, March 14th</span>
+      </div>
+      <div class="header__button next">&gt;</div>
+    </header>
     <div class="todo-list">
-      <div class="header">
-        <div class="header_button">&lt;</div>
-        <div class="header_calendar"><h2>MONDAY</h2><span>, March 14th</span></div>
-        <div class="header_button">&gt;</div>
+      <div class="task--completed">
+        <div class="task-block">
+          <input type="checkbox" checked class="task__button">
+          <span class="task__name">Morning run</span>
+        </div>
+        <span class="task__time">7:30</span>
       </div>
-      <div class="content">
-        <div class="task task--active">
-          <div class="task-block">
-            <div class="task_button">
-              <input type="checkbox" checked>
-            </div>
-            <div class="task_name">Morning run</div>
-          </div>
-          <div class="task_time">7:30</div>
+      <div class="task">
+        <div class="task-block">
+          <input type="checkbox" class="task__button">
+          <span class="task__name">Meeting</span>
         </div>
-        <div class="task">
-          <div class="task-block">
-            <div class="task_button">
-              <input type="checkbox">
-            </div>
-            <div class="task_name">Meeting</div>
-          </div>
-          <div class="task_time">10:15</div>
-        </div>
-        <div class="task">
-          <div class="task-block">
-            <div class="task_button">
-              <input type="checkbox">
-            </div>
-            <div class="task_name">Lunch with Mike</div>
-          </div>
-          <div class="task_time">13:00</div>
-        </div>
-        <div class="task">
-          <div class="task-block">
-            <div class="task_button">
-              <input type="checkbox">
-            </div>
-            <div class="task_name">Pay bills</div>
-          </div>
-          <div class="task_time">ALL DAY</div>
-        </div>
-        <div class="task">
-          <div class="task-block">
-            <div class="task_button">
-              <input type="checkbox">
-            </div>
-            <div class="task_name">Renew gym membership</div>
-          </div>
-          <div class="task_time">ALL DAY</div>
-        </div>
+        <span class="task__time">10:15</span>
       </div>
-      <div class="footer">
-        <div class="footer_tasks"><span>4</span> TASKS</div>
-        <div class="footer_add-new"><a href="">ADD NEW &plus;</a></div>
+      <div class="task">
+        <div class="task-block">
+          <input type="checkbox" class="task__button">
+          <span class="task__name">Lunch with Mike</span>
+        </div>
+        <span class="task__time">13:00</span>
+      </div>
+      <div class="task">
+        <div class="task-block">
+          <input type="checkbox" class="task__button">
+          <span class="task__name">Pay bills</span>
+        </div>
+        <span class="task__time">ALL DAY</span>
+      </div>
+      <div class="task">
+        <div class="task-block">
+          <input type="checkbox" class="task__button">
+          <span class="task__name">Renew gym membership</span>
+        </div>
+        <span class="task__time">ALL DAY</span>
       </div>
     </div>
+    <footer class="footer">
+      <span class="footer__tasks"><span class="footer-tasks__quantity">4</span> TASKS</span>
+      <span class="footer__add-new">ADD NEW &plus;</span>
+    </footer>
   </div>
 </body>
+
 </html>
