@@ -5,7 +5,7 @@ window.onload = function () {
   var storeElements = [];
 
   // логика JS, не связана с DOM
-  // данная функция работает только сo store
+  // данная функция работает сo store
   function addToStoreElements(element) {
     var elementPosition = listingElements.indexOf(element);
     if (elementPosition > -1) {
@@ -13,7 +13,7 @@ window.onload = function () {
       listingElements.splice(elementPosition, 1);
     }
   }
-  // данная функция работает только с listing
+  // данная функция работает с listing
   function addToListingElements(element) {
     var elementPosition = storeElements.indexOf(element);
     if (elementPosition > -1) {
@@ -21,7 +21,7 @@ window.onload = function () {
       storeElements.splice(elementPosition, 1);
     }
   }
-  // данная функция работает только с dlete
+  // данная функция работает с dlete
   function deleteElements(element) {
     var elementPosition = listingElements.indexOf(element);
     if (elementPosition < 0) {
@@ -31,7 +31,7 @@ window.onload = function () {
       listingElements.splice(elementPosition, 1);
     }
   }
-  // данная функция работает только с add new
+  // данная функция работает с add new
   function addNewElement(element) {
     listingElements.push(element);
   }
@@ -39,7 +39,13 @@ window.onload = function () {
   // updateUI берет данные из массивов и вставляет в DOM
   function updateUI() {
     var storeSelect = document.querySelector('.store-select');
+    var storeTitle = document.querySelector('.store-title');
     var listingSelect = document.querySelector('.listing-select');
+    var listingTitle = document.querySelector('.listing-title');
+    var storeLength = `(${storeElements.length})`;
+    var listingLength = `(${listingElements.length})`;
+    storeTitle.innerHTML = `Store ${storeLength}`;
+    listingTitle.innerHTML = `Listing ${listingLength}`;
     storeSelect.innerHTML = '';
     listingSelect.innerHTML = '';
 
@@ -57,7 +63,6 @@ window.onload = function () {
       storeSelect.append(newOption);
     }
   }
-
   // событие для кнопки "Add to store"
   var addButton = document.querySelector('#add-button-store');
   addButton.onclick = function () {
@@ -73,7 +78,7 @@ window.onload = function () {
     updateUI();
   }
   // событие для кнопки "Delete element"
-  var addButton = document.querySelector('#add-button-delete');
+  var addButton = document.querySelector('#delete-button');
   addButton.onclick = function () {
     var selectedOption = document.querySelector('.listing-select option:checked, .store-select option:checked');
     deleteElements(selectedOption.innerText);
@@ -83,7 +88,6 @@ window.onload = function () {
   var addButton = document.querySelector('#add-button-new');
   addButton.onclick = function () {
     var newElement = prompt('Введите название елемента', 'default');
-    console.log(newElement);
     addNewElement(newElement);
     updateUI();
   }
