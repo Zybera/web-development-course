@@ -7,18 +7,18 @@ var MusicPlayer = {
   currentTrack: 'song1.mp3',
   currentTime: '00:00',
   status: 'pause',
-  display: function() {
+  display: function () {
     return 'Track: ' + this.currentTrack + ', Status: ' + this.status + ', Time: ' + this.currentTime;
   },
-  play: function() {
+  play: function () {
     this.status = 'play';
     this.startTimer();
   },
-  pause: function() {
+  pause: function () {
     this.stopTimer();
     this.status = 'pause';
   },
-  next: function() {
+  next: function () {
     var trackNameArray = this.trackList.map(track => track.trackName);
     var currentTrackIndex = trackNameArray.indexOf(this.currentTrack, 0) + 1;
     if (currentTrackIndex === trackNameArray.length) {
@@ -27,28 +27,28 @@ var MusicPlayer = {
     this.currentTrack = trackNameArray[currentTrackIndex];
     this.restartTimer();
   },
-  prev: function() {
+  prev: function () {
     if (this.currentTime >= '00:10') {
       this.restartTimer();
-    }else {
+    } else {
       var trackNameArray = this.trackList.map(track => track.trackName);
       var currentTrackIndex = trackNameArray.indexOf(this.currentTrack, 0);
       if (this.currentTrack === trackNameArray[0]) {
         currentTrackIndex = trackNameArray.length - 1;
         this.currentTrack = trackNameArray[currentTrackIndex];
-      }else {
+      } else {
         currentTrackIndex--;
         this.currentTrack = trackNameArray[currentTrackIndex];
       }
       this.restartTimer();
     }
   },
-  showTracks: function() {
+  showTracks: function () {
     var trackNameArray = this.trackList.map(track => track.trackName);
     for (var i = 0; i < trackNameArray.length; i++) {
       if (trackNameArray[i] === this.currentTrack) {
         console.log([i + 1] + '. ' + trackNameArray[i] + ' - ' + this.currentTime + ' - играет сейчас');
-      }else {
+      } else {
         console.log([i + 1] + '. ' + trackNameArray[i]);
       }
     }
@@ -67,11 +67,11 @@ var MusicPlayer = {
       }
       if (minute < 10 && second < 10) {
         this.currentTime = '0' + minute + ':0' + second;
-      }else if (minute < 10 && second >= 10) {
+      } else if (minute < 10 && second >= 10) {
         this.currentTime = '0' + minute + ':' + second;
-      }else if (minute >= 10 && second < 10) {
+      } else if (minute >= 10 && second < 10) {
         this.currentTime = minute + ':0' + second;
-      }else {
+      } else {
         this.currentTime = minute + ':' + second;
       }
       second++;
@@ -79,7 +79,7 @@ var MusicPlayer = {
       if (this.currentTime >= trackTimeArray[currentTrackIndex] && currentTrackIndex === trackNameArray.length - 1) {
         this.pause();
         this.next();
-      }else if (this.currentTime >= trackTimeArray[currentTrackIndex]) {
+      } else if (this.currentTime >= trackTimeArray[currentTrackIndex]) {
         this.next();
       }
     }, 1000);
@@ -88,7 +88,7 @@ var MusicPlayer = {
     clearInterval(this.timer);
   },
   restartTimer: function () {
-    clearInterval(this.timer);
+    this.stopTimer();
     this.currentTime = '00:00';
     if (this.status === 'play') {
       setTimeout(() => {
