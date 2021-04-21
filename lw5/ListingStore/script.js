@@ -21,7 +21,7 @@ window.onload = function () {
       storeElements.splice(elementPosition, 1);
     }
   }
-  // данная функция работает с dlete
+  // данная функция работает с delete
   function deleteElements(element) {
     var elementPosition = listingElements.indexOf(element);
     if (elementPosition < 0) {
@@ -42,8 +42,8 @@ window.onload = function () {
     var storeTitle = document.querySelector('.store-title');
     var listingSelect = document.querySelector('.listing-select');
     var listingTitle = document.querySelector('.listing-title');
-    var storeLength = `(${storeElements.length})`;
-    var listingLength = `(${listingElements.length})`;
+    var storeLength = storeElements.length;
+    var listingLength = listingElements.length;
     storeTitle.innerHTML = `Store ${storeLength}`;
     listingTitle.innerHTML = `Listing ${listingLength}`;
     storeSelect.innerHTML = '';
