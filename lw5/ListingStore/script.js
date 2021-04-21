@@ -31,6 +31,10 @@ window.onload = function () {
       listingElements.splice(elementPosition, 1);
     }
   }
+  // данная функция работает только с add new
+  function addNewElement(element) {
+    listingElements.push(element);
+  }
 
   // updateUI берет данные из массивов и вставляет в DOM
   function updateUI() {
@@ -73,6 +77,14 @@ window.onload = function () {
   addButton.onclick = function () {
     var selectedOption = document.querySelector('.listing-select option:checked, .store-select option:checked');
     deleteElements(selectedOption.innerText);
+    updateUI();
+  }
+  // событие для кнопки "Add new element"
+  var addButton = document.querySelector('#add-button-new');
+  addButton.onclick = function () {
+    var newElement = prompt('Введите название елемента', 'default');
+    console.log(newElement);
+    addNewElement(newElement);
     updateUI();
   }
 
