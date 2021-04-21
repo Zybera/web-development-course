@@ -13,6 +13,14 @@ window.onload = function () {
       listingElements.splice(elementPosition, 1);
     }
   }
+  // данная функция работает только с состоянием
+  function addToListingElements(element) {
+    var elementPosition = storeElements.indexOf(element);
+    if (elementPosition > -1) {
+      listingElements.push(element);
+      storeElements.splice(elementPosition, 1);
+    }
+  }
 
   // updateUI берет данные из массивов и вставляет в DOM
   function updateUI() {
@@ -41,6 +49,13 @@ window.onload = function () {
   addButton.onclick = function () {
     var selectedOption = document.querySelector('.listing-select option:checked');
     addToStoreElements(selectedOption.innerText);
+    updateUI();
+  }
+  // событие для кнопки "Add to listing"
+  var addButton1 = document.querySelector('#add-button1');
+  addButton1.onclick = function () {
+    var selectedOption = document.querySelector('.store-select option:checked');
+    addToListingElements(selectedOption.innerText);
     updateUI();
   }
 
