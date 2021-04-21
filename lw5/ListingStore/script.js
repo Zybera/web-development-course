@@ -5,7 +5,7 @@ window.onload = function () {
   var storeElements = [];
 
   // логика JS, не связана с DOM
-  // данная функция работает только с состоянием
+  // данная функция работает только сo store
   function addToStoreElements(element) {
     var elementPosition = listingElements.indexOf(element);
     if (elementPosition > -1) {
@@ -13,12 +13,22 @@ window.onload = function () {
       listingElements.splice(elementPosition, 1);
     }
   }
-  // данная функция работает только с состоянием
+  // данная функция работает только с listing
   function addToListingElements(element) {
     var elementPosition = storeElements.indexOf(element);
     if (elementPosition > -1) {
       listingElements.push(element);
       storeElements.splice(elementPosition, 1);
+    }
+  }
+  // данная функция работает только с dlete
+  function deleteElements(element) {
+    var elementPosition = listingElements.indexOf(element);
+    if (elementPosition < 0) {
+      elementPosition = storeElements.indexOf(element);
+      storeElements.splice(elementPosition, 1);
+    } else {
+      listingElements.splice(elementPosition, 1);
     }
   }
 
@@ -45,17 +55,24 @@ window.onload = function () {
   }
 
   // событие для кнопки "Add to store"
-  var addButton = document.querySelector('#add-button');
+  var addButton = document.querySelector('#add-button-store');
   addButton.onclick = function () {
     var selectedOption = document.querySelector('.listing-select option:checked');
     addToStoreElements(selectedOption.innerText);
     updateUI();
   }
   // событие для кнопки "Add to listing"
-  var addButton1 = document.querySelector('#add-button1');
-  addButton1.onclick = function () {
+  var addButton = document.querySelector('#add-button-listing');
+  addButton.onclick = function () {
     var selectedOption = document.querySelector('.store-select option:checked');
     addToListingElements(selectedOption.innerText);
+    updateUI();
+  }
+  // событие для кнопки "Delete element"
+  var addButton = document.querySelector('#add-button-delete');
+  addButton.onclick = function () {
+    var selectedOption = document.querySelector('.listing-select option:checked, .store-select option:checked');
+    deleteElements(selectedOption.innerText);
     updateUI();
   }
 
