@@ -55,7 +55,7 @@ var MusicPlayer = {
   },
   timer: 0,
   startTimer: function () {
-    clearInterval(this.timer);
+    this.stopTimer();
     var trackNameArray = this.trackList.map(track => track.trackName);
     var trackTimeArray = this.trackList.map(track => track.trackTime);
     var minute = +(this.currentTime[0] + this.currentTime[1]);
