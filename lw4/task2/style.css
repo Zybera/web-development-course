@@ -75,10 +75,10 @@
   color: #CED3FF;
 }
 
-.task--completed .task__name {
+.task__name--completed {
   color: #CED3FF;
 }
 
-.task--completed .task__time {
+.task__time--completed {
   display: none;
 }
