@@ -2,7 +2,7 @@ var Cashbox = {
   amount: 0,
   operationHistory: [],
   addPayment: function (payment) {
-    if (payment.amount <= 0 || this.validation(payment)) {
+    if (this.validation(payment) || payment.amount <= 0) {
       console.log('amount not affected');
     } else {
       this.amount += payment.amount;
@@ -12,7 +12,7 @@ var Cashbox = {
     }
   },
   refundPayment: function (refund) {
-    if (this.amount - refund.amount < 0 || refund.amount <= 0 || this.validation(refund)) {
+    if (this.validation(refund) || this.amount - refund.amount < 0 || refund.amount <= 0) {
       console.log('amount not affected');
     } else {
       this.amount -= refund.amount;
